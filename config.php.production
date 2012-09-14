@@ -1,0 +1,13 @@
+<?php
+
+define('MYSQL_HOST', 'localhohst');
+define('MYSQL_USER', 'short');
+define('MYSQL_PASSWORD', 'short');
+define('MYSQL_DATABASE', 'short');
+define('TWITTER_USERNAME', 'zeyus');
+define('SHORT_URL', 'http://zys.im/'); // include the trailing slash!
+define('DEFAULT_URL', 'http://zeyus.com'); // omit the trailing slash!
+
+$URL_BLACKLIST = array('', 'about:blank', 'undefined', 'http://localhost/');
+
+?>

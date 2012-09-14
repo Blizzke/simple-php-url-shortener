@@ -10,8 +10,6 @@ if (isset($_GET['slug'])) {
 
 	if ('@' == $slug) {
 		$url = 'http://twitter.com/' . TWITTER_USERNAME;
-	} else if (' ' == $slug) { // +
-		$url = 'https://plus.google.com/u/0/' . GOOGLE_PLUS_ID . '/posts';
 	} else {
 
 		$slug = preg_replace('/[^a-z0-9]/si', '', $slug);
@@ -30,7 +28,9 @@ if (isset($_GET['slug'])) {
 				$db->query('UPDATE redirect SET hits = hits + 1 WHERE slug = "' . $escapedSlug . '"');
 				$url = $redirectResult->fetch_object()->url;
 			} else {
-				$url = DEFAULT_URL . $_SERVER['REQUEST_URI'];
+				header('Status: 404 Not Found');
+                                echo "Url not found";
+                                $db->close();exit();
 			}
 
 			$db->close();
