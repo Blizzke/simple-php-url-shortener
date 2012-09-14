@@ -9,8 +9,8 @@
 
 ## Features
 
-* Redirect to your Twitter account when `@` is used as a slug, e.g. `http://mths.be/@` → `http://twitter.com/mathias`.
-* Redirect to your main website when no slug is entered, e.g. `http://mths.be/` → `http://mathiasbynens.be/`.
+* Redirect to your Twitter account when `@` is used as a slug, e.g. `http://yourshortener.ext/@` → `http://twitter.com/yourhandle`.
+* Redirect to your main website when no slug is entered, e.g. `http://yourshortener.ext/` → `http://yourmaindomain.ext/`.
 * Ignores weird trailing characters (`!`, `"`, `#`, `$`, `%`, `&`, `'`, `(`, `)`, `*`, `+`, `,`, `-`, `.`, `/`, `@`, `:`, `;`, `<`, `=`, `>`, `[`, `\`, `]`, `^`, `_`, `{`, `|`, `}`, `~`) in slugs — useful when your short URL is run through a crappy link parser, e.g. `http://mths.be/aaa)` → same effect as visiting `http://mths.be/aaa`.
 * Doesn’t create multiple short URLs when you try to shorten the same URL. In this case, the script will simply return the existing short URL for that long URL.
 * DRY, minimal code.
